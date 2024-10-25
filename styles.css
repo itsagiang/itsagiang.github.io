@@ -393,7 +393,7 @@ body.night .theme-toggle .moon {
   right: 20px; /* Space from the right */
   padding: 10px 20px;
   border-radius: 50px;
-  background-color: #25D366; /* WhatsApp green */
+  background-color: #517891; /* WhatsApp green */
   color: white;
   border: none;
   cursor: pointer;
@@ -404,4 +404,22 @@ body.night .theme-toggle .moon {
 
 .whatsapp-button:hover {
   background-color: #128C7E; /* Darker green on hover */
+}
+.play-button {
+  position: fixed;  /* Position relative to the viewport */
+  bottom: 20px;     /* Distance from the bottom of the viewport */
+  left: 20px;       /* Distance from the left of the viewport */
+  background-color: #517891; /* Background color */
+  color: white;
+  border: none;     /* No border */
+  border-radius: 80px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer;   /* Pointer cursor on hover */
+  font-size: 16px;   /* Font size */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.play-button:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
 }
