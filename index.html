@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>!!!</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .mute-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .mute-button:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .play-stop-button {
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .play-stop-button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
 </head>
 <body>
   <div class="airplaneAnimation">
@@ -27,7 +64,7 @@
     <div class="banner-container">
         <i class="rope"></i>
         <i class="banner">
-          Hallooo Elawan!!! 🫵🫣
+          Hallooo Elawan!!! 😤🤯
           <i class="triangle"></i>
         </i>
     </div>
@@ -44,7 +81,31 @@
       Balas Hallo Angga
     </button>
   </a>
+
+  <!-- Audio Element -->
+  <audio id="backgroundAudio" loop>
+    <source src="eli.mp3" type="audio/mpeg">
+  </audio>
   
+  <button id="playStopButton" class="play-button">Play Audio</button>
+
+  <script>
+    const playStopButton = document.getElementById('playStopButton');
+    const audio = document.getElementById('backgroundAudio');
+    let isPlaying = false;
+
+    playStopButton.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        playStopButton.textContent = 'Play Audio';
+      } else {
+        audio.play();
+        playStopButton.textContent = 'Stop Audio';
+      }
+      isPlaying = !isPlaying; // Toggle the playing state
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
