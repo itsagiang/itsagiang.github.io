@@ -135,9 +135,9 @@ body.night {
 /* clouds */
 .clouds {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
+  width: 150%;
+  height: 150%;
+ top: 0;
   left: 0;
   overflow: hidden;
 }
@@ -153,7 +153,7 @@ body.night {
 
 .cloud {
   position: absolute;
-  width: 100px;
+  width: 200px;
   height: 100px;
   background-color: #fff;
   border-radius: 100px;
